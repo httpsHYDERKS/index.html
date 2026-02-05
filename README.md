@@ -11,6 +11,8 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            /* CURSOR EM FORMATO DE X */
+            cursor: crosshair;
         }
 
         body {
@@ -61,16 +63,15 @@
             flex-wrap: wrap;
         }
 
-        /* --- AQUI VOCÊ MUDA A FOTO --- */
+        /* FOTO NO QUADRADO */
         .profile-img {
             min-width: 320px;
             height: 350px;
             background-color: #222;
-            /* COLOQUE O LINK DA SUA IMAGEM ABAIXO */
-            background-image: url('SUA_IMAGEM_AQUI.jpg'); 
+            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
-            border-radius: 4px;
+            border: 2px solid #333;
         }
 
         .intro-text {
@@ -78,12 +79,55 @@
             min-width: 300px;
         }
 
-        .intro-text h1 {
+        /* EFEITO GLITCH NO NOME */
+        .glitch {
             font-size: 2.8rem;
+            font-weight: 700;
             color: #fff;
+            position: relative;
+            text-transform: uppercase;
             margin-bottom: 15px;
-            border-bottom: 1px solid #333;
-            padding-bottom: 10px;
+        }
+
+        .glitch::before, .glitch::after {
+            content: "ARCANJO PERALTA";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch::after {
+            left: -2px;
+            text-shadow: -2px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(31px, 9999px, 94px, 0); }
+            20% { clip: rect(62px, 9999px, 42px, 0); }
+            40% { clip: rect(16px, 9999px, 78px, 0); }
+            60% { clip: rect(87px, 9999px, 12px, 0); }
+            80% { clip: rect(54px, 9999px, 55px, 0); }
+            100% { clip: rect(2px, 9999px, 98px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            20% { clip: rect(12px, 9999px, 54px, 0); }
+            40% { clip: rect(89px, 9999px, 23px, 0); }
+            60% { clip: rect(5px, 9999px, 87px, 0); }
+            80% { clip: rect(42px, 9999px, 12px, 0); }
+            100% { clip: rect(77px, 9999px, 34px, 0); }
         }
 
         .intro-text h3 {
@@ -92,6 +136,8 @@
             margin-bottom: 10px;
             font-size: 1.1rem;
             text-transform: uppercase;
+            border-top: 1px solid #333;
+            padding-top: 10px;
         }
 
         .section-title {
@@ -131,7 +177,6 @@
             padding-left: 20px;
             position: relative;
             color: #aaa;
-            font-size: 0.9rem;
         }
 
         .rules-list li::before {
@@ -141,16 +186,8 @@
             color: #666;
         }
 
-        .patrol-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .patrol-item b {
-            display: block;
-            color: #fff;
-            margin-bottom: 5px;
+        .patrol-item {
+            margin-bottom: 15px;
         }
 
         .highlight-red {
@@ -185,7 +222,7 @@
         <section class="intro-grid">
             <div class="profile-img"></div>
             <div class="intro-text">
-                <h1>ARCANJO PERALTA</h1>
+                <div class="glitch">ARCANJO PERALTA</div>
                 <h3>Curso de Modulação</h3>
                 <p>Seja bem-vindo ao Curso de Modulação, este curso é de extrema importância para aprender / relembrar o modo correto de modular na rádio.</p>
                 <p>Como não é um curso opcional, <b>quem quiser subir sua patente terá que ter os cursos para cada patente.</b></p>
@@ -200,30 +237,25 @@
                 <li class="codigo-item"><b>QRR</b> – Pedido de reforço</li>
                 <li class="codigo-item"><b>QTH</b> – Localização</li>
                 <li class="codigo-item"><b>QRA</b> – Nome e patente</li>
-                <li class="codigo-item"><b>QRL</b> – Estou ocupado</li>
             </ul>
             <ul>
                 <li class="codigo-item"><b>QRX</b> – Prioridade (Silenciar)</li>
                 <li class="codigo-item"><b>QTA</b> – Abortar</li>
                 <li class="codigo-item"><b>TKS</b> – Obrigado</li>
-                <li class="codigo-item"><b>QRV</b> – A disposição</li>
                 <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo</li>
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Regras sobre a Modulação</h2>
+        <h2 class="section-title"><span>02</span> Regras de Modulação</h2>
         <ul class="rules-list">
-            <li>Não usar palavras inadequadas (xingamentos, "ah", "ééé", "matei um...").</li>
+            <li>Não usar palavras inadequadas (xingamentos, "ah", "ééé").</li>
             <li>Sempre prezar por uma modulação breve e rápida.</li>
-            <li>Caso queira conversar em paralelo, utilizar o <b>/pd</b>.</li>
             <li>Manter a calma na rádio mesmo sob pressão.</li>
         </ul>
 
         <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
-        <div class="patrol-grid">
-            <div class="patrol-item"><b>Código 5:</b> <span class="highlight-red">➥ FOGO LIBERADO (Atire para matar).</span></div>
-            <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
-        </div>
+        <div class="patrol-item"><b>Código 5:</b> <span class="highlight-red">➥ FOGO LIBERADO (Atire para matar).</span></div>
+        <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
 
         <footer>
             <div>© 2024 ARCANJO PERALTA</div>
