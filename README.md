@@ -3,133 +3,232 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARCANJO ANIMADO | CURSO</title>
+    <title>ARCANJO PERALTA | CURSO</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: crosshair;
         }
 
         body {
-            background-color: #0a0a0a;
-            color: #00ff41;
-            font-family: 'Courier New', Courier, monospace;
-            line-height: 1.6;
-            overflow-x: hidden;
-            padding: 20px;
+            background-color: #121212;
+            color: #d1d1d1;
+            font-family: 'Inter', sans-serif;
+            line-height: 1.4;
+            padding: 40px;
         }
 
-        .glitch-wrapper {
-            text-align: center;
-            margin-bottom: 50px;
-            padding-top: 40px;
-        }
-
-        .glitch {
-            font-size: 3.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            position: relative;
-            text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
-                         0.025em 0.04em 0 #fffc00;
-            animation: glitch 725ms infinite;
-        }
-
-        @keyframes glitch {
-            0% { text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00; }
-            15% { text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.025em 0 #fc00ff, -0.05em -0.05em 0 #fffc00; }
-            50% { text-shadow: 0.025em 0.05em 0 #00fffc, 0.05em 0 0 #fc00ff, 0 -0.05em 0 #fffc00; }
-            100% { text-shadow: -0.025em 0 0 #00fffc, -0.025em -0.025em 0 #fc00ff, -0.025em -0.05em 0 #fffc00; }
-        }
-
-        .container {
-            max-width: 900px;
+        .main-card {
+            max-width: 1000px;
             margin: 0 auto;
-            background: rgba(0, 20, 0, 0.8);
-            padding: 30px;
-            border: 1px solid #00ff41;
+            background-color: #1a1a1a;
+            border: 1px solid #333;
+            padding: 40px;
+            position: relative;
+        }
+
+        /* Header e Navegação */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #444;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+
+        nav a {
+            color: #888;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Seção Perfil/Intro */
+        .profile-section {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .profile-img {
+            width: 300px;
+            height: 250px;
+            background: #252525;
+            /* Placeholder para a imagem da estátua/capuz */
+            background-image: url('https://via.placeholder.com/300x250/252525/ffffff?text=IMAGEM+PERFIL'); 
+            background-size: cover;
+            background-position: center;
+        }
+
+        .intro-text h1 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .intro-text p {
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        .highlight-red {
+            color: #ff3e3e;
+            text-decoration: underline;
+        }
+
+        /* Blocos de Conteúdo */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            border-top: 1px solid #333;
+            padding-top: 30px;
         }
 
         h2 {
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
             color: #fff;
-            border-bottom: 2px solid #00ff41;
-            margin: 30px 0 15px 0;
+            display: flex;
+            align-items: center;
         }
 
-        .highlight { color: #ff003c; font-weight: bold; }
-        
-        .grid-codigos {
+        h2::before {
+            content: "2"; /* Número da seção como na foto */
+            margin-right: 10px;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .codigo-list {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            font-size: 0.85rem;
         }
 
-        li {
-            margin-bottom: 8px;
+        .codigo-item {
             list-style: none;
-            border-left: 3px solid #00ff41;
-            padding-left: 10px;
+            margin-bottom: 5px;
         }
 
-        body::before {
-            content: " ";
-            display: block;
-            position: fixed;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-            z-index: 2;
-            background-size: 100% 4px;
-            pointer-events: none;
+        .regras-lista {
+            font-size: 0.85rem;
+            color: #aaa;
         }
+
+        .regras-lista li {
+            list-style: none;
+            margin-bottom: 8px;
+        }
+
+        /* Rodapé Interno */
+        footer {
+            margin-top: 50px;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.75rem;
+            color: #666;
+        }
+
+        .fogo-maximo {
+            color: #ff3e3e;
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
 
-    <div class="glitch-wrapper">
-        <div class="glitch">ARCANJO ANIMADO</div>
-        <p>CURSO DE MODULAÇÃO</p>
-    </div>
+    <div class="main-card">
+        <header>
+            <div class="logo">▲ ARCANJO PERALTA</div>
+            <nav>
+                <a href="#">Sobre</a>
+                <a href="#">Patentes</a>
+                <a href="#">Regras</a>
+                <a href="#">Contato</a>
+            </nav>
+        </header>
 
-    <div class="container">
-        <h2>BEM-VINDO</h2>
-        <p>Este curso é de extrema importância. <span class="highlight">Obrigatório para subir de patente.</span></p>
-        <p>Dúvidas? Não tenha medo de perguntar!</p>
+        <section class="profile-section">
+            <div class="profile-img"></div>
+            <div class="intro-text">
+                <h1>ARCANJO PERALTA</h1>
+                <p>Seu portal para elevar a habilidade de modulação no rádio.</p>
+                
+                <h3>CURSO DE MODULAÇÃO</h3>
+                <p>Seja bem-vindo! Este curso é crucial à <span class="highlight-red">Obrigação de patente</span>.</p>
+                <p>Estamos disponíveis para dúvidas.<br>Não hesite em perguntar!</p>
+            </div>
+        </section>
 
-        <h2>CÓDIGO Q</h2>
-        <div class="grid-codigos">
-            <ul>
-                <li><strong>QAP</strong> – Na escuta</li>
-                <li><strong>QRR</strong> – Reforço</li>
-                <li><strong>QTH</strong> – Localização</li>
-                <li><strong>QRA</strong> – Nome/Patente</li>
-                <li><strong>QSL</strong> – Entendido</li>
-            </ul>
-            <ul>
-                <li><strong>QRX</strong> – Prioridade/Silêncio</li>
-                <li><strong>QTA</strong> – Abortar</li>
-                <li><strong>TKS</strong> – Obrigado</li>
-                <li><strong>QRV</strong> – À disposição</li>
-                <li><strong>QSJ</strong> – Dinheiro Sujo</li>
-            </ul>
+        <div class="content-grid">
+            <div>
+                <h2>CÓDIGO Q</h2>
+                <div class="codigo-list">
+                    <ul>
+                        <li class="codigo-item">QAP – Na escuta</li>
+                        <li class="codigo-item">QRR – Reforço</li>
+                        <li class="codigo-item">QRA – Local/Patente</li>
+                        <li class="codigo-item">QSL – Entendido</li>
+                    </ul>
+                    <ul>
+                        <li class="codigo-item">QRX – Prioridade</li>
+                        <li class="codigo-item">QTA – Abortar</li>
+                        <li class="codigo-item">QSJ – Dinheiro Sujo</li>
+                    </ul>
+                    <ul>
+                        <li class="codigo-item">TKS - Obrigado</li>
+                        <li class="codigo-item">QRV - À disposição</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div>
+                <h2>REGRAS DE RÁDIO</h2>
+                <ul class="regras-lista">
+                    <li>> Proibido xingamentos ou palavras "ah", "ééé".</li>
+                    <li>> Conversas por calma apenas no /pd</li>
+                </ul>
+            </div>
         </div>
 
-        <h2>REGRAS DE RÁDIO</h2>
-        <ul>
-            <li>➢ Proibido xingamentos ou palavras como "ah", "ééé".</li>
-            <li>➢ Modulação breve e rápida.</li>
-            <li>➢ Conversas paralelas apenas no /pd.</li>
-            <li>➢ Mantenha a calma sob pressão.</li>
-        </ul>
+        <div style="margin-top: 40px;">
+            <h2 style="font-size: 1rem;">3 CÓDIGOS DE PATRULHA</h2>
+            <div class="codigo-list">
+                <ul>
+                    <li class="codigo-item">> Cod 0: Início</li>
+                    <li class="codigo-item">> Cod 2: Baixa intensidade</li>
+                    <li class="codigo-item">> Mantenha o calmo / Investigação</li>
+                </ul>
+                <ul>
+                    <li class="codigo-item">> Modulação breve e rápida.</li>
+                    <li class="codigo-item">> Conversas paralelas sem pressão.</li>
+                    <li class="codigo-item">> Cod 6: <span class="fogo-maximo">- FOGO MÁXIMO</span></li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>CÓDIGOS DE PATRULHA</h2>
-        <ul>
-            <li><strong>Cód 0:</strong> Início</li>
-            <li><strong>Cód 1:</strong> Baixa intensidade</li>
-            <li><strong>Cód 5:</strong> <span class="highlight">FOGO LIBERADO</span></li>
-            <li><strong>Cód 7:</strong> QRR MÁXIMO</li>
-        </ul>
+        <footer>
+            <div>© 2024 ARCANJO PERALTA</div>
+            <div>TRANSMISSÃO CRIPTOGRAFADA</div>
+        </footer>
     </div>
 
 </body>
