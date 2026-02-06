@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -68,7 +67,8 @@
             min-width: 320px;
             height: 350px;
             background-color: #222;
-            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
+            background-image: url('<img width="472" height="572" alt="image" src="https://github.com/user-attachments/assets/e6075cf1-58bd-4f05-b63a-b036cb3c6a00" />
+');
             background-size: cover;
             background-position: center;
             border: 2px solid #333;
