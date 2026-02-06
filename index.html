@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            cursor: crosshair; /* Cursor em formato de mira/X */
+            cursor: crosshair;
         }
 
         body {
@@ -63,16 +63,27 @@
 
         nav a { color: #666; text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
 
-        .intro-grid { display: flex; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
+        /* AJUSTE AQUI: O container que segura a foto e o texto */
+        .intro-grid { 
+            display: flex; 
+            gap: 40px; 
+            margin-bottom: 50px; 
+            align-items: flex-start; /* Alinha o topo do texto com o topo da foto */
+        }
 
+        /* AJUSTE AQUI: Largura controlada da imagem */
         .profile-img {
-            min-width: 320px;
+            flex: 0 0 320px; /* Não deixa a imagem esticar nem encolher além de 320px */
             height: 380px;
             background-color: #222;
             background-image: url('https://github.com/httpsHYDERKS/index.html/blob/main/Captura%20de%20tela%202026-02-05%20224222.png?raw=true'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
+        }
+
+        .intro-text {
+            flex: 1; /* Faz o texto ocupar o restante do espaço ao lado */
         }
 
         .glitch {
@@ -82,6 +93,7 @@
             position: relative;
             text-transform: uppercase;
             margin-bottom: 10px;
+            line-height: 1;
         }
         .glitch::before, .glitch::after {
             content: "ARCANJO PERALTA";
@@ -92,23 +104,26 @@
         @keyframes g1 { 0% { clip: rect(31px, 9999px, 94px, 0); } 100% { clip: rect(2px, 9999px, 98px, 0); } }
         @keyframes g2 { 0% { clip: rect(65px, 9999px, 100px, 0); } 100% { clip: rect(77px, 9999px, 34px, 0); } }
 
+        /* Restante do código permanece igual */
         .section-title {
             font-size: 0.9rem; color: #fff; text-transform: uppercase; letter-spacing: 2px;
             margin: 40px 0 20px 0; display: flex; align-items: center; border-top: 1px solid #333; padding-top: 20px;
         }
         .section-title span { color: #555; margin-right: 15px; font-weight: bold; }
-
         .codigo-q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; font-size: 0.85rem; }
         .codigo-item { list-style: none; padding: 4px 0; border-bottom: 1px solid #222; }
-
         .rules-list li { list-style: none; margin-bottom: 8px; padding-left: 20px; position: relative; color: #aaa; font-size: 0.9rem; }
         .rules-list li::before { content: "➢"; position: absolute; left: 0; color: #666; }
-
         .patrol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; }
         .patrol-item { background: #1a1a1a; padding: 10px; border-radius: 4px; border-left: 3px solid #333; margin-bottom: 5px; }
         .highlight-red { color: #ff4d4d; font-weight: bold; }
-
         footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; font-size: 0.7rem; color: #555; }
+        
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            .intro-grid { flex-direction: column; }
+            .profile-img { min-width: 100%; flex: none; }
+        }
     </style>
 </head>
 <body>
@@ -132,61 +147,6 @@
             </div>
         </section>
 
-        <h2 class="section-title"><span>01</span> Código Q</h2>
-        <div class="codigo-q-grid">
-            <ul>
-                <li class="codigo-item"><b>QAP</b> – Na escuta.</li>
-                <li class="codigo-item"><b>QRR</b> – Pedido de reforço.</li>
-                <li class="codigo-item"><b>QTH</b> – Localização.</li>
-                <li class="codigo-item"><b>QRA</b> – Nome e patente.</li>
-                <li class="codigo-item"><b>QRL</b> – Estou ocupado.</li>
-                <li class="codigo-item"><b>QRQ</b> – Transmita mais rápido.</li>
-            </ul>
-            <ul>
-                <li class="codigo-item"><b>QRS</b> – Transmita mais devagar.</li>
-                <li class="codigo-item"><b>QRU</b> – Ocorrência.</li>
-                <li class="codigo-item"><b>QTX</b> – Saindo de serviço.</li>
-                <li class="codigo-item"><b>QSV / VTR</b> – Viatura.</li>
-                <li class="codigo-item"><b>QSL</b> – Entendido.</li>
-                <li class="codigo-item"><b>QSO</b> – Comunicar algo importante.</li>
-            </ul>
-            <ul>
-                <li class="codigo-item"><b>QRX</b> – Prioridade no Rádio.</li>
-                <li class="codigo-item"><b>QTA</b> – Abortar.</li>
-                <li class="codigo-item"><b>TKS</b> – Obrigado.</li>
-                <li class="codigo-item"><b>QSM</b> – Repita a mensagem.</li>
-                <li class="codigo-item"><b>QRV</b> – À disposição.</li>
-                <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo.</li>
-            </ul>
         </div>
-
-        <h2 class="section-title"><span>02</span> Regras de Modulação</h2>
-        <ul class="rules-list">
-            <li>Proibido xingamentos ou gírias ("lá", "ali", "matei um").</li>
-            <li>Modulação breve e rápida; aprenda a ouvir antes de falar.</li>
-            <li>Conversas paralelas apenas via <b>/pd</b>.</li>
-            <li>Mantenha a calma, module com clareza mesmo sob pressão.</li>
-            <li>Se pedir QRR, informe seu QRA.</li>
-            <li>Ao comando de QRX, silencie a rádio imediatamente.</li>
-            <li>Modulação em VTR pelo P2 (GTM pode ser o piloto).</li>
-            <li>Perseguição: modulação pela viatura primária.</li>
-        </ul>
-
-        <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
-        <div class="patrol-grid">
-            <div class="patrol-item"><b>Cod 0:</b> Iniciando patrulhamento.</div>
-            <div class="patrol-item"><b>Cod 1:</b> Intensidade baixa (trânsito).</div>
-            <div class="patrol-item"><b>Cod 2:</b> Intensidade média (Mascarados/Roubos).</div>
-            <div class="patrol-item"><b>Cod 3:</b> Uso não letal / Intensidade alta.</div>
-            <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO (Atire para matar).</span></div>
-            <div class="patrol-item"><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
-        </div>
-
-        <footer>
-            <div>© 2024 ARCANJO PERALTA</div>
-            <div>TRANSMISSÃO CRIPTOGRAFADA</div>
-        </footer>
-    </div>
-
 </body>
 </html>
