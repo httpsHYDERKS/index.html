@@ -18,7 +18,7 @@
             background-color: #0f0f0f;
             color: #ccc;
             font-family: 'Inter', sans-serif;
-            line-height: 1.5;
+            line-height: 1.6;
             padding: 20px;
             overflow-x: hidden;
         }
@@ -88,10 +88,9 @@
 
         .profile-img {
             min-width: 320px;
-            height: 380px;
+            height: 420px;
             background-color: #222;
-            /* Lembre-se de colocar o link da sua foto cinematográfica aqui */
-            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
+            background-image: url('https://github.com/httpsHYDERKS/index.html/blob/main/Captura%20de%20tela%202026-02-05%20224222.png?raw=true'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
@@ -99,14 +98,14 @@
 
         .intro-text { flex: 1; min-width: 300px; }
 
-        /* EFEITO GLITCH ATUALIZADO PARA GTA RP FIVEM */
+        /* EFEITO GLITCH GTA RP FIVEM */
         .glitch {
             font-size: 3.5rem;
             font-weight: 900;
             color: #fff;
             position: relative;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             letter-spacing: -1px;
         }
 
@@ -136,7 +135,7 @@
 
         @keyframes glitch-anim-2 {
             0% { clip: rect(50px, 9999px, 60px, 0); transform: skew(-0.5deg); }
-            100% { clip: rect(90px, 9999px, 100px, 0); transform: skew(-0.5deg); }
+            100% { clip: rect(90px, 9999px, 100px, 0); transform: skew(0.5deg); }
         }
 
         .section-title {
@@ -145,11 +144,16 @@
         }
         .section-title span { color: #555; margin-right: 15px; font-weight: bold; }
 
-        .codigo-q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; font-size: 0.85rem; }
-        .codigo-item { list-style: none; padding: 4px 0; border-bottom: 1px solid #222; }
+        .codigo-q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; font-size: 0.85rem; }
+        .codigo-item { list-style: none; padding: 5px 0; border-bottom: 1px solid #222; }
+        .codigo-item b { color: #fff; margin-right: 5px; }
 
-        .patrol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; }
-        .patrol-item { background: #1a1a1a; padding: 10px; border-radius: 4px; border-left: 3px solid #333; }
+        .rules-list li { list-style: none; margin-bottom: 10px; padding-left: 25px; position: relative; color: #aaa; font-size: 0.9rem; }
+        .rules-list li::before { content: "➢"; position: absolute; left: 0; color: #ff0000; }
+
+        .patrol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+        .patrol-item { background: #1a1a1a; padding: 15px; border-radius: 4px; border-left: 4px solid #333; transition: 0.3s; }
+        .patrol-item:hover { background: #222; border-left-color: #ff0000; }
         .highlight-red { color: #ff4d4d; font-weight: bold; }
 
         footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; font-size: 0.7rem; color: #555; }
@@ -173,29 +177,70 @@
             <div class="intro-text">
                 <div class="glitch">GTA RP FIVEM</div>
                 <h3 style="color:#fff; text-transform:uppercase; margin-bottom:15px; border-bottom: 1px solid #333; padding-bottom: 5px;">Curso de Modulação</h3>
-                <p>Seja bem-vindo ao portal oficial. Este treinamento é focado na excelência da comunicação via rádio dentro do FiveM.</p>
-                <p style="margin-top:10px;">Lembre-se: a modulação correta salva vidas em patrulha. <b>Obrigatório para promoção.</b></p>
-                <p style="margin-top:10px;">Dúvidas? Procure um instrutor!</p>
+                <p>Seja bem-vindo ao Curso de Modulação! Este treinamento é de extrema importância para aprender e relembrar o modo correto de modular na rádio.</p>
+                <p style="margin-top:10px;"><b>Atenção:</b> Este não é um curso opcional. Quem quiser subir sua patente deverá possuir os cursos específicos para cada nível hierárquico.</p>
+                <p style="margin-top:10px; color: #fff;">Estamos disponíveis para dúvidas, não tenha medo de perguntar!</p>
             </div>
         </section>
 
         <h2 class="section-title"><span>01</span> Código Q</h2>
+        <p style="font-size: 0.85rem; margin-bottom: 20px; color: #888;">O código Q é formado por três siglas iniciadas com Q. Principais códigos utilizados:</p>
         <div class="codigo-q-grid">
             <ul>
                 <li class="codigo-item"><b>QAP</b> – Na escuta.</li>
-                <li class="codigo-item"><b>QRR</b> – Reforço.</li>
+                <li class="codigo-item"><b>QRR</b> – Pedido de reforço.</li>
+                <li class="codigo-item"><b>QTH</b> – Localização.</li>
+                <li class="codigo-item"><b>QRA</b> – Nome e patente.</li>
+                <li class="codigo-item"><b>QRL</b> – Estou ocupado.</li>
+                <li class="codigo-item"><b>QRQ</b> – Transmita mais rápido.</li>
+            </ul>
+            <ul>
+                <li class="codigo-item"><b>QRS</b> – Transmita mais devagar.</li>
+                <li class="codigo-item"><b>QRU</b> – Ocorrência.</li>
+                <li class="codigo-item"><b>QTX</b> – Saindo de serviço.</li>
+                <li class="codigo-item"><b>QSV / VTR</b> – Viatura.</li>
                 <li class="codigo-item"><b>QSL</b> – Entendido.</li>
+                <li class="codigo-item"><b>QSO</b> – Comunicar algo importante.</li>
+            </ul>
+            <ul>
+                <li class="codigo-item"><b>QRX</b> – Prioridade (Silenciar rádio).</li>
+                <li class="codigo-item"><b>QTA</b> – Abortar.</li>
+                <li class="codigo-item"><b>TKS</b> – Obrigado.</li>
+                <li class="codigo-item"><b>QSM</b> – Repita a mensagem.</li>
+                <li class="codigo-item"><b>QRV</b> – À disposição.</li>
+                <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo.</li>
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Patrulha</h2>
+        <h2 class="section-title"><span>02</span> Regras de Modulação</h2>
+        <ul class="rules-list">
+            <li>Não usar palavras inadequadas (xingamentos, “ah”, “ééé...”, “aqui”, “lá”, “ali”).</li>
+            <li>Sempre prezar por uma modulação breve e rápida; aprenda a ouvir e depois falar.</li>
+            <li>Não manter conversas paralelas na rádio; utilize o <b>/pd</b>.</li>
+            <li>Mantenha a calma mesmo sob pressão; controle suas emoções.</li>
+            <li>Caso peça QRR, informe sempre o seu QRA.</li>
+            <li>Se alguém pedir QRX, silencie imediatamente e aguarde o operador.</li>
+            <li>Não atropele a modulação de outros oficiais.</li>
+            <li>A modulação em VTRs é feita pelo P2 (GTM pode ser o piloto).</li>
+            <li>Em perseguição, a modulação é do Steve na primária. Se der QTA, a secundária assume.</li>
+            <li>Em caso de múltiplos acompanhamentos, não atropele a modulação alheia.</li>
+        </ul>
+
+        <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
         <div class="patrol-grid">
-            <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO.</span></div>
+            <div class="patrol-item"><b>Código 0:</b> ➥ Iniciando patrulhamento.</div>
+            <div class="patrol-item"><b>Código 1:</b> ➥ Intensidade baixa (trânsito).</div>
+            <div class="patrol-item"><b>Código 2:</b> ➥ Média (Drogas/Registradora/Mascarados).</div>
+            <div class="patrol-item"><b>Código 3:</b> ➥ Uso não letal / Intensidade alta (armados).</div>
+            <div class="patrol-item"><b>Código 4:</b> ➥ Situação contida / sob controle.</div>
+            <div class="patrol-item"><b>Código 5:</b> <span class="highlight-red">➥ Fogo liberado (Atire para matar).</span></div>
+            <div class="patrol-item"><b>Código 6:</b> ➥ Perímetro / Investigar o local (360º).</div>
+            <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
         </div>
 
         <footer>
             <div>© 2026 GTA RP FIVEM</div>
-            <div>SISTEMA DE TREINAMENTO</div>
+            <div>SISTEMA DE COMUNICAÇÃO CRIPTOGRAFADO</div>
         </footer>
     </div>
 
