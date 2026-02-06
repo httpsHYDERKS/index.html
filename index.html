@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARCANJO PERALTA | CURSO</title>
+    <title>ARCANJO PERALTA | CURSO DE MODULAÇÃO</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
@@ -11,8 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            /* CURSOR EM FORMATO DE X */
-            cursor: crosshair;
+            cursor: crosshair; /* Transforma o mouse em um X/Cruz */
         }
 
         body {
@@ -41,159 +40,57 @@
             margin-bottom: 30px;
         }
 
-        .logo {
-            font-weight: 700;
-            font-size: 1.2rem;
-            letter-spacing: 1px;
-            color: #fff;
-        }
+        .logo { font-weight: 700; font-size: 1.2rem; letter-spacing: 1px; color: #fff; }
 
-        nav a {
-            color: #666;
-            text-decoration: none;
-            margin-left: 20px;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-        }
+        nav a { color: #666; text-decoration: none; margin-left: 20px; font-size: 0.8rem; text-transform: uppercase; }
 
-        .intro-grid {
-            display: flex;
-            gap: 40px;
-            margin-bottom: 50px;
-            flex-wrap: wrap;
-        }
+        .intro-grid { display: flex; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
 
-        /* FOTO DO PERSONAGEM INTEGRADA */
         .profile-img {
             min-width: 320px;
             height: 380px;
             background-color: #222;
-            background-image: url('https://i.ytimg.com/vi/tmW5IxHGVs8/maxresdefault.jpg'); 
+            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
         }
 
-        .intro-text {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        /* NOME COM EFEITO GLITCH */
+        /* EFEITO GLITCH NO NOME */
         .glitch {
             font-size: 2.8rem;
             font-weight: 700;
             color: #fff;
             position: relative;
             text-transform: uppercase;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
         }
-
         .glitch::before, .glitch::after {
             content: "ARCANJO PERALTA";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
         }
-
-        .glitch::before {
-            left: 2px;
-            text-shadow: -2px 0 #ff00c1;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
-        }
-
-        .glitch::after {
-            left: -2px;
-            text-shadow: -2px 0 #00fff9;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch-anim {
-            0% { clip: rect(31px, 9999px, 94px, 0); }
-            20% { clip: rect(62px, 9999px, 42px, 0); }
-            100% { clip: rect(2px, 9999px, 98px, 0); }
-        }
-
-        @keyframes glitch-anim2 {
-            0% { clip: rect(65px, 9999px, 100px, 0); }
-            50% { clip: rect(5px, 9999px, 87px, 0); }
-            100% { clip: rect(77px, 9999px, 34px, 0); }
-        }
-
-        .intro-text h3 {
-            color: #fff;
-            margin-top: 20px;
-            margin-bottom: 15px;
-            font-size: 1.1rem;
-            text-transform: uppercase;
-            border-bottom: 1px solid #333;
-            padding-bottom: 5px;
-        }
+        .glitch::before { left: 2px; text-shadow: -2px 0 #ff00c1; clip: rect(44px, 450px, 56px, 0); animation: g1 5s infinite linear alternate-reverse; }
+        .glitch::after { left: -2px; text-shadow: -2px 0 #00fff9; clip: rect(44px, 450px, 56px, 0); animation: g2 5s infinite linear alternate-reverse; }
+        @keyframes g1 { 0% { clip: rect(31px, 9999px, 94px, 0); } 100% { clip: rect(2px, 9999px, 98px, 0); } }
+        @keyframes g2 { 0% { clip: rect(65px, 9999px, 100px, 0); } 100% { clip: rect(77px, 9999px, 34px, 0); } }
 
         .section-title {
-            font-size: 0.9rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            margin: 40px 0 20px 0;
-            display: flex;
-            align-items: center;
-            border-top: 1px solid #333;
-            padding-top: 20px;
+            font-size: 0.9rem; color: #fff; text-transform: uppercase; letter-spacing: 2px;
+            margin: 40px 0 20px 0; display: flex; align-items: center; border-top: 1px solid #333; padding-top: 20px;
         }
+        .section-title span { color: #555; margin-right: 15px; font-weight: bold; }
 
-        .section-title span {
-            color: #555;
-            margin-right: 15px;
-            font-weight: bold;
-        }
+        .codigo-q-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 10px; font-size: 0.85rem; }
+        .codigo-item { list-style: none; padding: 4px 0; border-bottom: 1px solid #222; }
 
-        .codigo-q-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            font-size: 0.85rem;
-        }
+        .rules-list li { list-style: none; margin-bottom: 8px; padding-left: 20px; position: relative; color: #aaa; font-size: 0.9rem; }
+        .rules-list li::before { content: "➢"; position: absolute; left: 0; color: #666; }
 
-        .codigo-item {
-            list-style: none;
-            padding: 5px 0;
-            border-bottom: 1px solid #222;
-        }
+        .patrol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 15px; }
+        .patrol-item { background: #1a1a1a; padding: 10px; border-radius: 4px; border-left: 3px solid #333; }
+        .highlight-red { color: #ff4d4d; font-weight: bold; }
 
-        .rules-list li {
-            list-style: none;
-            margin-bottom: 8px;
-            padding-left: 25px;
-            position: relative;
-            color: #aaa;
-        }
-
-        .rules-list li::before {
-            content: "➢";
-            position: absolute;
-            left: 0;
-            color: #666;
-        }
-
-        .highlight-red {
-            color: #ff4d4d;
-            font-weight: bold;
-        }
-
-        footer {
-            margin-top: 60px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            display: flex;
-            justify-content: space-between;
-            font-size: 0.7rem;
-            color: #555;
-        }
+        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; font-size: 0.7rem; color: #555; }
     </style>
 </head>
 <body>
@@ -201,54 +98,71 @@
     <div class="main-card">
         <header>
             <div class="logo">▲ ARCANJO PERALTA</div>
-            <nav>
-                <a href="#">Sobre</a>
-                <a href="#">Patentes</a>
-                <a href="#">Regras</a>
-                <a href="#">Contato</a>
-            </nav>
+            <nav><a href="#">Sobre</a><a href="#">Patentes</a><a href="#">Regras</a><a href="#">Contato</a></nav>
         </header>
 
         <section class="intro-grid">
             <div class="profile-img"></div>
             <div class="intro-text">
                 <div class="glitch">ARCANJO PERALTA</div>
-                <h3>CURSO DE MODULAÇÃO</h3>
-                <p>Seja bem-vindo ao Curso de Modulação! Este curso é crucial para aprender/relembrar o modo correto de modular no rádio.</p>
-                <p style="margin-top:10px;"><b>Obrigatório para subir de patente.</b></p>
-                <p style="margin-top:10px; color: #fff;">Dúvidas? Não tenha medo de perguntar!</p>
+                <h3 style="color:#fff; text-transform:uppercase; margin-bottom:15px;">Curso de Modulação</h3>
+                <p>Seja bem-vindo ao Curso de Modulação! Este curso é de extrema importância para aprender/relembrar o modo correto de modular na rádio. <b>O curso não é opcional:</b> quem quiser subir sua patente terá que ter os cursos para cada patente.</p>
+                <p style="margin-top:10px;">Estamos disponíveis para dúvidas, não tenha medo de perguntar!</p>
             </div>
         </section>
 
         <h2 class="section-title"><span>01</span> Código Q</h2>
         <div class="codigo-q-grid">
             <ul>
-                <li class="codigo-item"><b>QAP</b> – Na escuta</li>
-                <li class="codigo-item"><b>QRR</b> – Reforço</li>
-                <li class="codigo-item"><b>QTH</b> – Localização</li>
-                <li class="codigo-item"><b>QRA</b> – Nome/Patente</li>
+                <li class="codigo-item"><b>QAP</b> – Na escuta.</li>
+                <li class="codigo-item"><b>QRR</b> – Pedido de reforço.</li>
+                <li class="codigo-item"><b>QTH</b> – Localização.</li>
+                <li class="codigo-item"><b>QRA</b> – Nome e patente.</li>
+                <li class="codigo-item"><b>QRL</b> – Estou ocupado.</li>
+                <li class="codigo-item"><b>QRQ</b> – Transmita mais rápido.</li>
             </ul>
             <ul>
-                <li class="codigo-item"><b>QRX</b> – Prioridade</li>
-                <li class="codigo-item"><b>QTA</b> – Abortar</li>
-                <li class="codigo-item"><b>TKS</b> – Obrigado</li>
-                <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo</li>
+                <li class="codigo-item"><b>QRS</b> – Transmita mais devagar.</li>
+                <li class="codigo-item"><b>QRU</b> – Ocorrência.</li>
+                <li class="codigo-item"><b>QTX</b> – Saindo de serviço.</li>
+                <li class="codigo-item"><b>QSV / VTR</b> – Viatura.</li>
+                <li class="codigo-item"><b>QSL</b> – Entendido.</li>
+                <li class="codigo-item"><b>QSO</b> – Comunicar algo importante.</li>
+            </ul>
+            <ul>
+                <li class="codigo-item"><b>QRX</b> – Prioridade no Rádio.</li>
+                <li class="codigo-item"><b>QTA</b> – Abortar.</li>
+                <li class="codigo-item"><b>TKS</b> – Obrigado.</li>
+                <li class="codigo-item"><b>QSM</b> – Repita a mensagem.</li>
+                <li class="codigo-item"><b>QRV</b> – À disposição.</li>
+                <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo.</li>
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Regras de Rádio</h2>
+        <h2 class="section-title"><span>02</span> Regras sobre a Modulação</h2>
         <ul class="rules-list">
-            <li>Proibido xingamentos ou gírias inadequadas.</li>
-            <li>Modulação deve ser breve e rápida.</li>
-            <li>Conversas paralelas apenas no /pd.</li>
-            <li>Mantenha a calma sob pressão.</li>
+            <li>Não usar palavras inadequadas (xingamentos, “ah”, “ééé...”, “aqui”, “lá”, “ali”, “matei um...”).</li>
+            <li>Sempre prezar por uma modulação breve e rápida; ouça antes de falar.</li>
+            <li>Não manter conversas paralelas; utilize o <b>/pd</b> se necessário.</li>
+            <li>Mantenha a calma mesmo sob pressão. Module com clareza e controle emoções.</li>
+            <li>Caso peça QRR, informe seu QRA.</li>
+            <li>Se alguém pedir QRX, silencie a rádio imediatamente.</li>
+            <li>Não atropele a modulação de outros oficiais.</li>
+            <li>Modulações em VTRs pelo P2 (GTM o piloto pode modular).</li>
+            <li>Perseguição: modulação feita pela primária. Em QTA, a secundária assume.</li>
+            <li>Alterações de trajeto: modular apenas se houver Steve a QTI.</li>
         </ul>
 
-        <h2 class="section-title"><span>03</span> Códigos de Patrulha</h2>
-        <div style="font-size: 0.9rem;">
-            <p><b>Cod 0:</b> Iniciando patrulha</p>
-            <p><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO</span></p>
-            <p><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO</span></p>
+        <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
+        <div class="patrol-grid">
+            <div class="patrol-item"><b>Cod 0:</b> Iniciando patrulhamento.</div>
+            <div class="patrol-item"><b>Cod 1:</b> Intensidade baixa (trânsito).</div>
+            <div class="patrol-item"><b>Cod 2:</b> Intensidade média (Drogas/Registradora/Caixa).</div>
+            <div class="patrol-item"><b>Cod 3:</b> Uso não letal / Intensidade alta (armados).</div>
+            <div class="patrol-item"><b>Cod 4:</b> Situação contida / sob controle.</div>
+            <div class="patrol-item"><b>Cod 5:</b> <span class="highlight-red">Fogo liberado (Atire para matar).</span></div>
+            <div class="patrol-item"><b>Cod 6:</b> Fazer o perímetro / Investigar o local.</div>
+            <div class="patrol-item"><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
         </div>
 
         <footer>
