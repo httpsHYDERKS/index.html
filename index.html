@@ -7,6 +7,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
 
+        /* CONFIGURAÇÕES GERAIS */
         * {
             margin: 0;
             padding: 0;
@@ -90,7 +91,7 @@
             min-width: 320px;
             height: 420px;
             background-color: #222;
-            background-image: url('https://github.com/httpsHYDERKS/index.html/blob/main/Captura%20de%20tela%202026-02-05%20224222.png?raw=true'); 
+            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
@@ -156,7 +157,28 @@
         .patrol-item:hover { background: #222; border-left-color: #ff0000; }
         .highlight-red { color: #ff4d4d; font-weight: bold; }
 
-        footer { margin-top: 60px; padding-top: 20px; border-top: 1px solid #333; display: flex; justify-content: space-between; font-size: 0.7rem; color: #555; }
+        /* RODAPÉ AJUSTADO */
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            color: #555;
+            position: relative;
+        }
+
+        .footer-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #888;
+            font-weight: bold;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
     </style>
 </head>
 <body>
@@ -184,7 +206,6 @@
         </section>
 
         <h2 class="section-title"><span>01</span> Código Q</h2>
-        <p style="font-size: 0.85rem; margin-bottom: 20px; color: #888;">O código Q é formado por três siglas iniciadas com Q. Principais códigos utilizados:</p>
         <div class="codigo-q-grid">
             <ul>
                 <li class="codigo-item"><b>QAP</b> – Na escuta.</li>
@@ -215,32 +236,32 @@
         <h2 class="section-title"><span>02</span> Regras de Modulação</h2>
         <ul class="rules-list">
             <li>Não usar palavras inadequadas (xingamentos, “ah”, “ééé...”, “aqui”, “lá”, “ali”).</li>
-            <li>Sempre prezar por uma modulação breve e rápida; aprenda a ouvir e depois falar.</li>
-            <li>Não manter conversas paralelas na rádio; utilize o <b>/pd</b>.</li>
+            <li>Sempre prezar por uma modulação breve e rápida; ouça antes de falar.</li>
+            <li>Conversas paralelas apenas via <b>/pd</b>.</li>
             <li>Mantenha a calma mesmo sob pressão; controle suas emoções.</li>
-            <li>Caso peça QRR, informe sempre o seu QRA.</li>
-            <li>Se alguém pedir QRX, silencie imediatamente e aguarde o operador.</li>
+            <li>Ao pedir QRR, informe sempre o seu QRA.</li>
+            <li>Comando de QRX exige silêncio imediato na rádio.</li>
             <li>Não atropele a modulação de outros oficiais.</li>
-            <li>A modulação em VTRs é feita pelo P2 (GTM pode ser o piloto).</li>
-            <li>Em perseguição, a modulação é do Steve na primária. Se der QTA, a secundária assume.</li>
-            <li>Em caso de múltiplos acompanhamentos, não atropele a modulação alheia.</li>
+            <li>Modulação em VTR pelo P2 (GTM pode ser o piloto).</li>
+            <li>Em perseguição, a primária modula. Se houver QTA, a secundária assume.</li>
         </ul>
 
         <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
         <div class="patrol-grid">
             <div class="patrol-item"><b>Código 0:</b> ➥ Iniciando patrulhamento.</div>
             <div class="patrol-item"><b>Código 1:</b> ➥ Intensidade baixa (trânsito).</div>
-            <div class="patrol-item"><b>Código 2:</b> ➥ Média (Drogas/Registradora/Mascarados).</div>
-            <div class="patrol-item"><b>Código 3:</b> ➥ Uso não letal / Intensidade alta (armados).</div>
+            <div class="patrol-item"><b>Código 2:</b> ➥ Média (Drogas/Mascarados).</div>
+            <div class="patrol-item"><b>Código 3:</b> ➥ Uso não letal / Intensidade alta.</div>
             <div class="patrol-item"><b>Código 4:</b> ➥ Situação contida / sob controle.</div>
             <div class="patrol-item"><b>Código 5:</b> <span class="highlight-red">➥ Fogo liberado (Atire para matar).</span></div>
-            <div class="patrol-item"><b>Código 6:</b> ➥ Perímetro / Investigar o local (360º).</div>
-            <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO, CHAMAR FORÇA TÁTICA.</span></div>
+            <div class="patrol-item"><b>Código 6:</b> ➥ Perímetro / Investigar (360º).</div>
+            <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO (FORÇA TÁTICA).</span></div>
         </div>
 
         <footer>
             <div>© 2026 GTA RP FIVEM</div>
-            <div>SISTEMA DE COMUNICAÇÃO CRIPTOGRAFADO</div>
+            <div class="footer-center">ARCANJO PERALTA</div>
+            <div>SISTEMA CRIPTOGRAFADO</div>
         </footer>
     </div>
 
