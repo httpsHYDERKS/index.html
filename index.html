@@ -63,13 +63,12 @@
             flex-wrap: wrap;
         }
 
-        /* FOTO NO QUADRADO */
+        /* FOTO DO PERSONAGEM INTEGRADA */
         .profile-img {
             min-width: 320px;
             height: 380px;
             background-color: #222;
-            /* Link da imagem ajustado para o formato CSS */
-            background-image: url('https://github.com/user-attachments/assets/e6075cf1-58bd-4f05-b63a-b036cb3c6a00'); 
+            background-image: url('https://raw.githubusercontent.com/ttpshyderks/ttpshyderks.github.io/main/Captura%20de%20tela%202026-02-05%20205441.png'); 
             background-size: cover;
             background-position: center;
             border: 1px solid #333;
@@ -80,14 +79,14 @@
             min-width: 300px;
         }
 
-        /* EFEITO GLITCH NO NOME */
+        /* NOME COM EFEITO GLITCH */
         .glitch {
             font-size: 2.8rem;
             font-weight: 700;
             color: #fff;
             position: relative;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
         }
 
         .glitch::before, .glitch::after {
@@ -127,6 +126,7 @@
 
         .intro-text h3 {
             color: #fff;
+            margin-top: 20px;
             margin-bottom: 15px;
             font-size: 1.1rem;
             text-transform: uppercase;
@@ -154,7 +154,7 @@
 
         .codigo-q-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 15px;
             font-size: 0.85rem;
         }
@@ -171,7 +171,6 @@
             padding-left: 25px;
             position: relative;
             color: #aaa;
-            font-size: 0.9rem;
         }
 
         .rules-list li::before {
@@ -179,24 +178,6 @@
             position: absolute;
             left: 0;
             color: #666;
-        }
-
-        .patrol-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 20px;
-        }
-
-        .patrol-item {
-            background: #1d1d1d;
-            padding: 10px;
-            border-radius: 4px;
-        }
-
-        .patrol-item b {
-            display: block;
-            color: #fff;
-            margin-bottom: 3px;
         }
 
         .highlight-red {
@@ -233,68 +214,41 @@
             <div class="intro-text">
                 <div class="glitch">ARCANJO PERALTA</div>
                 <h3>CURSO DE MODULAÇÃO</h3>
-                <p>Seja bem-vindo ao Curso de Modulação, este curso é de extrema importância para aprender / relembrar o modo correto de modular na rádio.</p>
-                <p style="margin-top:10px;">Como não é curso opcional, <b>quem quiser subir sua patente terá que ter os cursos para cada patente.</b></p>
-                <p style="margin-top:10px; color: #fff;">Estamos disponível para dúvidas, não tenha medo de perguntar!</p>
+                <p>Seja bem-vindo ao Curso de Modulação! Este curso é crucial para aprender/relembrar o modo correto de modular no rádio.</p>
+                <p style="margin-top:10px;"><b>Obrigatório para subir de patente.</b></p>
+                <p style="margin-top:10px; color: #fff;">Dúvidas? Não tenha medo de perguntar!</p>
             </div>
         </section>
 
         <h2 class="section-title"><span>01</span> Código Q</h2>
-        <p style="font-size: 0.85rem; color: #777; margin-bottom: 15px;">
-            O código Q é formado por três siglas sendo sempre iniciado com o Q. Abaixo os principais códigos utilizados em nossa guarnição:
-        </p>
         <div class="codigo-q-grid">
             <ul>
                 <li class="codigo-item"><b>QAP</b> – Na escuta</li>
-                <li class="codigo-item"><b>QRR</b> – Pedido de reforço</li>
+                <li class="codigo-item"><b>QRR</b> – Reforço</li>
                 <li class="codigo-item"><b>QTH</b> – Localização</li>
-                <li class="codigo-item"><b>QRA</b> – Nome e patente</li>
-                <li class="codigo-item"><b>QRL</b> – Estou ocupado</li>
-                <li class="codigo-item"><b>QRQ</b> – Transmita mais rápido</li>
+                <li class="codigo-item"><b>QRA</b> – Nome/Patente</li>
             </ul>
             <ul>
-                <li class="codigo-item"><b>QRS</b> – Transmita mais devagar</li>
-                <li class="codigo-item"><b>QRU</b> – Ocorrência</li>
-                <li class="codigo-item"><b>QTX</b> – Saindo de serviço</li>
-                <li class="codigo-item"><b>QSV / VTR</b> – Viatura</li>
-                <li class="codigo-item"><b>QSL</b> – Entendido</li>
-                <li class="codigo-item"><b>QSO</b> – Comunicar algo importante</li>
-            </ul>
-            <ul>
-                <li class="codigo-item"><b>QRX</b> – Prioridade no Rádio (Silenciar)</li>
+                <li class="codigo-item"><b>QRX</b> – Prioridade</li>
                 <li class="codigo-item"><b>QTA</b> – Abortar</li>
                 <li class="codigo-item"><b>TKS</b> – Obrigado</li>
-                <li class="codigo-item"><b>QSM</b> – Repita a mensagem</li>
-                <li class="codigo-item"><b>QRV</b> – A disposição</li>
                 <li class="codigo-item"><b>QSJ</b> – Dinheiro Sujo</li>
             </ul>
         </div>
 
-        <h2 class="section-title"><span>02</span> Regras sobre a Modulação</h2>
+        <h2 class="section-title"><span>02</span> Regras de Rádio</h2>
         <ul class="rules-list">
-            <li>Não usar palavras inadequadas (xingamentos, “ah”, “ééé...”, “aqui”, “lá”, “ali”, “matei um...”).</li>
-            <li>Sempre prezar por uma modulação breve e rápida, aprenda a ouvir e depois falar.</li>
-            <li>Não manter conversas paralelas na rádio. Caso queira, utilizar o <b>/pd</b>.</li>
-            <li>Manter a calma na rádio mesmo sobre pressão. Module com calma e controle as emoções.</li>
-            <li>Caso peça QRR diga qual seu QRA.</li>
-            <li>Caso alguém peça QRX, silencie a rádio e aguarde a mensagem do operador.</li>
-            <li>Não atropele a modulação de outros oficiais.</li>
-            <li>Modulação em VTRs feita pelo P2 (GTM o piloto poderá modular).</li>
-            <li>Perseguição: modulação pelo Steve na primária. Se der QTA, a secundária assume.</li>
-            <li>Alterações no trajeto: modular apenas se tiver Steve a QTI.</li>
-            <li>Não atropelar a modulação em caso de múltiplos acompanhamentos.</li>
+            <li>Proibido xingamentos ou gírias inadequadas.</li>
+            <li>Modulação deve ser breve e rápida.</li>
+            <li>Conversas paralelas apenas no /pd.</li>
+            <li>Mantenha a calma sob pressão.</li>
         </ul>
 
-        <h2 class="section-title"><span>03</span> Código de Patrulha</h2>
-        <div class="patrol-grid">
-            <div class="patrol-item"><b>Código 0:</b> ➥ Iniciando patrulhamento.</div>
-            <div class="patrol-item"><b>Código 1:</b> ➥ Intensidade baixa (trânsito).</div>
-            <div class="patrol-item"><b>Código 2:</b> ➥ Intensidade média (Drogas/Registradora/Caixa eletrônica/Mascarados).</div>
-            <div class="patrol-item"><b>Código 3:</b> ➥ Uso não letal / Intensidade alta (armados).</div>
-            <div class="patrol-item"><b>Código 4:</b> ➥ Situação contida / sob controle.</div>
-            <div class="patrol-item"><b>Código 5:</b> <span class="highlight-red">➥ FOGO LIBERADO (Atire para matar).</span></div>
-            <div class="patrol-item"><b>Código 6 ou 360º:</b> ➥ Fazer o perímetro no local / Investigar o local.</div>
-            <div class="patrol-item"><b>Código 7:</b> <span class="highlight-red">➥ QRR MÁXIMO, CHAMAR A FORÇA TÁTICA.</span></div>
+        <h2 class="section-title"><span>03</span> Códigos de Patrulha</h2>
+        <div style="font-size: 0.9rem;">
+            <p><b>Cod 0:</b> Iniciando patrulha</p>
+            <p><b>Cod 5:</b> <span class="highlight-red">FOGO LIBERADO</span></p>
+            <p><b>Cod 7:</b> <span class="highlight-red">QRR MÁXIMO</span></p>
         </div>
 
         <footer>
